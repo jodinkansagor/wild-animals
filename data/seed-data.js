@@ -1,7 +1,7 @@
 export const animals = [
     { name:'lion',
-        family:' ',
-        weight:' ',
+        family:'cat',
+        weight:350,
         image:' ',
         type:' ',
         hasHair:' ',
