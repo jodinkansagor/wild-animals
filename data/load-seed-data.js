@@ -2,7 +2,7 @@ require('dotenv').config();
 const pg = require('pg');
 const Client = pg.Client;
 // import seed data:
-const animals = require('./data/see-data');
+const animals = require('./data/seed-data');
 
 run();
 
