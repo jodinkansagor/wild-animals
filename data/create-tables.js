@@ -19,13 +19,19 @@ async function run() {
     
         // run a query to create tables
         await client.query(`
+
+            CREATE TABLE types (
+                id SERIAL PRIMARY KEY NOT NULL,
+                name VARCHAR(256) NOT NULL
+            )
+
             CREATE TABLE animals (
                 id SERIAL PRIMARY KEY NOT NULL,
                 name VARCHAR(256) NOT NULL,
                 weight INTEGER NOT NULL,
                 image VARCHAR(256) NOT NULL,
-                type VARCHAR(256) NOT NULL,
-                has_hair BOOLEAN NOT NULL
+                type_id  INTEGER NOT NULL REFERENCES types(id),
+                carnivore BOOLEAN NOT NULL
             );
           
         `);

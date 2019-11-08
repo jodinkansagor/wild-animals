@@ -36,7 +36,7 @@ export const animals = [
         carnivore:true,
     }, { name:'Shark',
         weight:180,
-        image:'../public/assets/shark.jpg',
+        image:'../public/assets/shark.jpeg',
         type:'fish',
         carnivore:true,
     }, { name:'Jellyfish',
