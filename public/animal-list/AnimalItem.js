@@ -6,6 +6,8 @@ class AnimalItem extends Component {
         const isCarnivore = (animal) => {
             if (animal.carnivore === true) {
                 return '🥩';
+            } else {
+                return '🌿';
             }
         };
 

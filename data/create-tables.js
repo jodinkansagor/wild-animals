@@ -23,7 +23,7 @@ async function run() {
             CREATE TABLE types (
                 id SERIAL PRIMARY KEY NOT NULL,
                 name VARCHAR(256) NOT NULL
-            )
+            );
 
             CREATE TABLE animals (
                 id SERIAL PRIMARY KEY NOT NULL,

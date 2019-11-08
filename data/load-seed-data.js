@@ -2,8 +2,8 @@ require('dotenv').config();
 const pg = require('pg');
 const Client = pg.Client;
 // import seed data:
-const types = require('./data/types.js');
-const animals = require('./data/seed-data.js');
+const types = require('./types.js');
+const animals = require('./seed-data.js');
 
 
 run();
@@ -21,10 +21,9 @@ async function run() {
                     INSERT INTO types (name)
                     VALUES ($1)
                     RETURNING *;
-                
                 `,
                 [type]);
-                return result.row[0];
+                return result.rows[0];
             })
         );
 
@@ -35,7 +34,9 @@ async function run() {
 
             animals.map(animal => {
                 const type = savedTypes.find(type => {
-                    return type.name === animal.type;
+                    console.log(type, 'type');
+                    console.log(animal.type);
+                    return type.name.toLowerCase() === animal.type;
                 });
 
                 return client.query(`
@@ -43,9 +44,7 @@ async function run() {
                     VALUES ($1, $2, $3, $4, $5);
                     `,
                 [animal.name, animal.weight, animal.image, type.id, animal.carnivore]);
-                
-                
-                
+                  
             })
         );
 

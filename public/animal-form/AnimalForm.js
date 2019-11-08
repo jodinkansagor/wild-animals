@@ -13,7 +13,7 @@ class AnimalForm extends Component {
                 type: parseInt(formData.get('type-id')),
                 image: formData.get('image'),
                 weight: parseInt(formData.get('weight')),
-                isCarnivore: formData.get('is-carnivore') === 'on'
+                carnivore: formData.get('carnivore') === 'on'
             };
 
             try {
@@ -59,16 +59,15 @@ class AnimalForm extends Component {
                                 <label for="weight">Average Weight in Pounds</label>
                                 <input id="weight"
                                     name="weight"
-                                    required
-                                    pattern="[0-9]"
+                                    required                   
                                     placeholder="100"
                                     title="Average Weight">
                 </p>
                                 
-                                    <fieldset for="is-carnivore">
+                                    <fieldset for="carnivore">
                                         <legend>Is a Carnivore?</legend>
                                         <label class="horizontally-centered">
-                                            <input id="is-carnivore" name="is-carnivore" type="checkbox"> Yes
+                                            <input id="carnivore" name="carnivore" type="checkbox"> Yes
                     </label>
                 </fieldset>
                                         <p>
