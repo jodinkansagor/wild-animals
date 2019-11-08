@@ -9,7 +9,7 @@ class AnimalList extends Component {
             const props = { animal: animal };
             const animalItem = new AnimalItem(props);
             const animalItemDOM = animalItem.renderDOM();
-            element.appandChild(animalItemDOM);
+            element.appendChild(animalItemDOM);
         });
     }
 
