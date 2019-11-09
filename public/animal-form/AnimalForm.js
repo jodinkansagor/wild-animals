@@ -39,7 +39,7 @@ class AnimalForm extends Component {
 
        
         return /*html*/`
-                <form class="cat-form" >
+                <form class="animal-form" >
                     <p>
                         <label for="name">Name</label>
                         <input id="name" name="name" required placeholder="Wild Animal">

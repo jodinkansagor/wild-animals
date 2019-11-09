@@ -1,0 +1,33 @@
+body {
+    background-color: oldlace;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Courgette', cursive;
+}
+
+a {
+    font-family: helvetica;
+    color: brown;
+    margin: 7px;
+}
+
+a:active {
+    color: darkgreen
+}
+
+hr {
+    border: 2px solid brown;
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+
+

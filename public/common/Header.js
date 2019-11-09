@@ -6,15 +6,17 @@ class Header extends Component {
 
         return `
         <header>
-                <img class="logo" src="../assets/awesome-logo.png" alt="Awesome Logo">
                 <h1>${title}</h1>
                 <nav>
                     <a href="./">Home</a>
-                    <a href="./animal-list.html">Animals</a>
+                    <a href="./animal-list.html">See The Animals</a>
                     <a href="./animal-form.html">Add an Animal</a>
                 </nav>
+                <hr>
             </header>
         `;
     }
 }
 export default Header;
+
+/* <img class="logo" src="../assets/awesome-logo.png" alt="Awesome Logo"></img> */
