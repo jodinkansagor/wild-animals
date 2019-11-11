@@ -4,7 +4,7 @@ module.exports = [
         image:'assets/lion.jpg',
         type:'mammal',
         carnivore:true,
-    }, { name:'white-tailed deer',
+    }, { name:'White-tailed deer',
         weight:150,
         image:'assets/white-tail.jpg',
         type:'mammal',

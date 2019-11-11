@@ -11,7 +11,7 @@ class App extends Component {
         return `
         <div>
                 <main>
-                    <p></p>
+                    <img src = "assets/animal-montage.jpg" alt = "animal montage">
                 </main>
             </div>
         `;
