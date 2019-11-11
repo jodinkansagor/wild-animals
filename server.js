@@ -41,6 +41,41 @@ app.get('/api/wild-animals', async(request, response) => {
     }
 });
 
+//get one animal
+app.get('/api/wild-animals/:id', async(request, response) => {
+    const id = request.params.id;
+    
+
+    try {
+        const result = await client.query(`
+            SELECT
+                a.*,
+                t.name as type
+            FROM animals a
+            JOIN types t
+            on a.type_id = t.id
+            where a.id = $1
+        `, 
+        [id]);
+
+        const animal = result.rows[0];
+        if (!animal) {
+            response.status(404).json({
+                error: 'Animal id ${id} does not exist'
+            });
+        }   
+        else {
+            response.json(result.rows[0]);
+        }
+    }
+    catch (err) {
+        console.log(err);
+        response.status(500).json({
+            error: err.message || err
+        });
+    }
+});
+
 //add an animal
 app.post('/api/wild-animals', async(request, response) => {
     const animal = request.body;

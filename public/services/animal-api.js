@@ -17,6 +17,14 @@ export async function getAnimals() {
     return data;
 }
 
+export async function getAnimal(id) {
+    const url = `${URL}/wild-animals/${id}`;
+
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+}
+
 export async function addAnimal(animal) {
     const url = `${URL}/wild-animals`;
     const response = await fetch(url, {
