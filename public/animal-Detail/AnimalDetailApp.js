@@ -34,7 +34,10 @@ class AnimalDetailApp extends Component {
         }
 
         finally {
-            loading.update({ loading: false });
+            setTimeout(() => {
+                loading.update({ loading: false });
+
+            }, 10000);
         }
     }
 
