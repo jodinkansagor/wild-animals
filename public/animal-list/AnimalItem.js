@@ -14,15 +14,17 @@ class AnimalItem extends Component {
 
 
         return `
-        <li class="animal-item">
-                <div class="info-container">
-                    <h2>${animal.name}</h2>
-                    <p class="animal-type">${animal.type}</p>
-                </div>
-                <div class="image-container">
-                    <img src="${animal.image}" alt="${animal.name} image">
-                </div>
-                <p class="year">Eats: ${isCarnivore(animal)}</p>
+            <li class="animal-item">
+                <a href="animal-detail.html?id=${animal.id}">
+                    <div class="info-container">
+                        <h2>${animal.name}</h2>
+                        <p class="animal-type">${animal.type}</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="${animal.image}" alt="${animal.name} image">
+                    </div>
+                    <p class="year">Eats: ${isCarnivore(animal)}</p>
+                </a>
             </li>
         `;
     }
